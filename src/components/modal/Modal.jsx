@@ -16,7 +16,7 @@ export default function Modal({ state, setState }) {
 		const formData = new FormData(e.currentTarget);
 		dispatch(
 			add({
-				id: new Date(),
+				id: new Date().toLocaleString(),
 				title: formData.get('title'),
 				description: formData.get('description'),
 				date: formData.get('date'),

@@ -1,10 +1,10 @@
-import { combineReducers, createStore } from 'redux';
-import reducer from './features/list/listSlice';
+import { configureStore } from '@reduxjs/toolkit';
+import listReducer from './features/list/listSlice';
 
-const rootReducer = combineReducers({
-	list: reducer,
+const store = configureStore({
+	reducer: {
+		list: listReducer,
+	},
 });
-
-const store = createStore(rootReducer);
 
 export default store;
